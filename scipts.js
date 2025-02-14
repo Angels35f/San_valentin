@@ -18,7 +18,7 @@ document.getElementById("play_audio4").addEventListener("click", function() {
 });
 document.getElementById("verificar1").addEventListener("click", function() {
     let respuesta = document.getElementById("respuesta1").value;
-    if (respuesta.toLowerCase() === "19/12/2025") {
+    if (respuesta.toLowerCase() === "19/12/2024") {
         alert("Respuesta correcta");
         window.open("https://1drv.ms/w/c/ce1d2959ad794565/Ebl3N3wckrZDnGXqNhr2WiYBhBpcCiGi4GQBwv-WMX6rgA?e=L4syjt", "_blank");
     } else {
