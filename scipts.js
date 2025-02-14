@@ -38,12 +38,16 @@ document.getElementById("verificar3").addEventListener("click", function() {
     let respuesta = document.getElementById("respuesta3").value.toLowerCase();
     if (respuesta === "serotonina") {
         alert("Respuesta correcta");
+        mostrarVideo();
     } else if (respuesta === "yoko") {
         alert("Respuesta muy correcta");
+        mostrarVideo();
+        document.getElementById('respuestaCorrecta').style.display = 'block';
     } else {
         alert("Respuesta incorrecta");
     }
 });
+
 function drawSunflower() {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
@@ -81,4 +85,10 @@ function drawSunflower() {
         ctx.stroke();
         ctx.closePath();
     }, 3000);
+}
+function mostrarVideo() {
+    const videoCuadro = document.getElementById('videoCuadro');
+    const video = document.getElementById('dtmf');
+    videoCuadro.style.display = 'block';
+    video.play();
 }

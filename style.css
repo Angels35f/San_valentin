@@ -5,6 +5,33 @@ body {
     color: #d6336c;
     margin: 0;
     padding: 20px;
+    display: flex;
+}
+
+.sidebar_izq {
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#skz1 {
+
+    width: 50%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+#skz2 {
+
+    width: 50%;
+    border-radius: 10px;
+    margin: 20px 0;
 }
 
 .container {
@@ -14,14 +41,23 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
 }
+
 #primera {
     width: 30%;
     border-radius: 10px;
     margin: 20px 0;
 }
-#segunda{
+
+#segunda {
     width: 50%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+#tercera {
+    width: 25%;
     border-radius: 10px;
     margin-top: 60px;
 }
@@ -30,13 +66,8 @@ h1 {
     color: #d6336c;
     text-align: center;
 }
-h2{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    color: rgb(75, 54, 54);
-    text-align: justify;
-}
-h3{
+
+h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: rgb(75, 54, 54);
@@ -53,7 +84,7 @@ button {
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
-    margin-bottom: 10;
+    margin-bottom: 10px;
 }
 
 button:hover {
@@ -70,8 +101,49 @@ button:hover {
 .audio-control button {
     margin-right: 10px;
 }
+
 canvas {
     display: none;
     margin: 20px auto;
     border: 1px solid #000000;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .sidebar_izq {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    h2, h3 {
+        font-size: 14px;
+    }
+
+    #primera, #segunda {
+        width: 100%;
+    }
+}
+#videoCuadro{
+    display: none;
+    margin: 20px auto;
+    text-align: center;
+}
+#respuestaCorrecta{
+    display: none;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
