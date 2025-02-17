@@ -1,20 +1,32 @@
 document.getElementById("play_audio1").addEventListener("click", function() {
     let music = document.getElementById("audio1");
-    music.play();
+    music.currentTime = 702;
+    music.play().catch(error=>{
+        console.log("Error al reproducir el audio", error)
+    })
 });
 
 document.getElementById("play_audio2").addEventListener("click", function() {
     let music = document.getElementById("audio2");
-    music.play();
+    music.currentTime = 560;
+    music.play().catch(error=>{
+        console.log("Error al reproducir el audio", error)
+    })
 });
 
 document.getElementById("play_audio3").addEventListener("click", function() {
     let music = document.getElementById("audio3");
-    music.play();
+    music.currentTime = 895;
+    music.play().catch(error=>{
+        console.log("Error al reproducir el audio", error)
+    })
 });
 document.getElementById("play_audio4").addEventListener("click", function() {
     let music = document.getElementById("audio4");
-    music.play();
+    music.currentTime = 1058;
+    music.play().catch(error=>{
+        console.log("Error al reproducir el audio", error)
+    })
 });
 document.getElementById("verificar1").addEventListener("click", function() {
     let respuesta = document.getElementById("respuesta1").value;
