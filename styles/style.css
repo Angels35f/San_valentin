@@ -10,7 +10,7 @@ body {
 
 
 .sidebar_izq {
-    width: 400px;
+    width: 25vw;
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -30,8 +30,8 @@ body {
 }
 
 .container {
-    max-width: 600px;
-    margin: auto;
+    max-width: 50vw;
+    margin: 0 3vw 0 3vw;
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -106,32 +106,6 @@ canvas {
     margin: 20px auto;
     border: 1px solid #000000;
 }
-
-/* Estilos responsivos */
-@media (max-width: 600px) {
-    body {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .sidebar_izq {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .container {
-        max-width: 100%;
-    }
-
-    h2, h3 {
-        font-size: 14px;
-    }
-
-    #primera, #segunda {
-        width: 100%;
-    }
-}
 #videoCuadro{
     display: none;
     margin: 20px auto;
@@ -168,11 +142,12 @@ canvas {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .sidebar_der{
-    width: 400px;
+    width: 25vw;
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-right: 20px;
+    margin-left: 20px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
