@@ -6,8 +6,8 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
-    background-color: #ffdde1;
-    color: #d6336c;
+    background: linear-gradient(to bottom, #1C0116, #090022, #3e123b, #7c1160);
+    color: #39085b;
     margin: 0;
     padding: 20px;
     display: flex;
@@ -17,7 +17,7 @@ body {
 
 .sidebar_izq {
     width: 25vw;
-    background-color: #fff;
+    background-color: #0a0029;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-right: 20px;
@@ -38,10 +38,13 @@ body {
 .container {
     max-width: 50vw;
     margin: 0 3vw 0 3vw;
-    background: white;
+    background: rgb(40, 5, 44);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     flex: 1;
 }
 
@@ -70,13 +73,20 @@ body {
 h1 {
     color: #d6336c;
     text-align: center;
+    font-size: 35pt;
 }
 
 h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    color: rgb(75, 54, 54);
+    color: rgb(200, 189, 189);
     text-align: justify;
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: rgb(192, 182, 182);
+    text-align: center;
 }
 
 button {
@@ -149,7 +159,7 @@ canvas {
 }
 .sidebar_der{
     width: 25vw;
-    background-color: #fff;
+    background-color: #0a0029;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-right: 20px;
@@ -165,6 +175,8 @@ canvas {
     width: 40%;
     border-radius: 10px;
     margin: 20px 0;
+    border-color: #000000;
+    border: 20px;
 }
 #skz8 {
 
