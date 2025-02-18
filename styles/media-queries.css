@@ -18,16 +18,10 @@
         padding: 0.625em;
         box-sizing: border-box;
         margin: 10px 0 0 0;
-        flex:1;
-
-    }
-
-
-    .sidebar_izq, .sidebar_der {
+        flex: 1;
         display: flex;
         flex-wrap: wrap;
     }
-
 
     h1 {
         font-size: 1.5em;
@@ -41,6 +35,21 @@
 
     #primera, #segunda, #tercera, #cuarta {
         width: 35%;
+    }
+
+    .img-small {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .img-medium {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .img-large {
+        width: 100%;
+        margin: 10px 0;
     }
 
     .audio-control {

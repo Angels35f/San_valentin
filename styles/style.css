@@ -12,9 +12,6 @@ body {
     padding: 20px;
     display: flex;
 }
-
-
-
 .sidebar_izq {
     width: 25vw;
     background-color: #0a0029;
@@ -28,9 +25,38 @@ body {
     align-items: center;
     
 }
-#skz1, #skz2, #skz3, #skz4, #skz9, #skz10, #skz11, #skz12 {
+.sidebar_der {
+    width: 25vw;
+    background-color: #0a0029;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.sidebar_izq img, .sidebar_der img {
     width: 40%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+.img-small {
+    width: 40%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.img-medium {
+    width: 50%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.img-large {
+    width: 70%;
     border-radius: 10px;
     margin: 20px 0;
 }
@@ -38,7 +64,7 @@ body {
 .container {
     max-width: 50vw;
     margin: 0 3vw 0 3vw;
-    background: rgb(40, 5, 44);
+    background: #0a0029;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -101,6 +127,9 @@ button {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+button .customControls{
+    align-items: center;
+}
 
 button:hover {
     background-color: #c2255c;
@@ -116,6 +145,7 @@ button:hover {
 .audio-control button {
     margin-right: 10px;
 }
+
 
 canvas {
     display: none;
@@ -156,31 +186,4 @@ canvas {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.sidebar_der{
-    width: 25vw;
-    background-color: #0a0029;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-right: 20px;
-    margin-left: 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-#skz5, #skz6, #skz7, #skz13, #skz14, #skz15, #skz16 {
-
-    width: 40%;
-    border-radius: 10px;
-    margin: 20px 0;
-    border-color: #000000;
-    border: 20px;
-}
-#skz8 {
-
-    width: 70%;
-    border-radius: 10px;
-    margin: 20px 0;
 }

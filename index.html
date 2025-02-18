@@ -8,59 +8,77 @@
     <link rel="stylesheet" href="styles/media-queries.css">
 </head>
 <body>
-    <div class="sidebar_izq">
-        <img id="skz1" src="assets/img4.jpg" alt="skz1v">
-        <h3>No pregunten, solo quería poner imagenes de los skz para que no se vea tan vacio uwu</h3>
-        <img id="skz2" src="assets/gif1.gif" alt="skz2v">
-        <h3>Además así no sé, te gusta más todo y te termino gustando más yo OwO</h3>
-        <img id="skz3" src="assets/img6.png" alt="skz3v">
-        <h3>Bueno, eso espero, que entre más cosas que te gustan ponga pues más cariño le tendrás a todo esto jsjs</h3>
-        <img id="skz4" src="assets/gif2.gif" alt="skz4v">
-        <h3>Esto es como el lore que nadie va a leer</h3>
-        <img id="skz9" src="assets/img9.jpg" alt="skz9v">
-        <h3>Al final, solo es relleno, deberías estar concentrada en la parte del medio ._.</h3>
-        <img id="skz10" src="assets/img10.jpg" alt="skz10v">
-        <h3>Aunque, si quieres leer un poco de mi esquizofrenia pues acá anda xd</h3>
-        <img id="skz11" src="assets/img11.jpg" alt="skz11v">
-        <h3>3 kilos de papa, 2 cocacolas, 1 aceite, oh, chat equivocado</h3>
-        <img id="skz12" src="assets/img12.jpg" alt="skz12v">
-    </div>
+    <div class="sidebar_izq" id="sidebar_izq"></div>
 
     <div class="container">
         <h1>Feliz San Valentín! ♥</h1>
         <img id="primera" src="assets/img1.jpg" alt="Imagen de fondo">
-        <h2>Bueno, la mejor forma de iniciar todo esto, es entender que: Yo no te pedí que fueras mi valentine porque lo di por hecho uwu, solo me aseguré que estuvieras el día conmigo para poder darte este “regalo” (ya no sé ni qué considerar regalo hoy en día (mentira, sí lo considero, pero es por si piensas “¿en serio esto es un regalo?” entonces así no me siento mal uwu)). Así que, una vez llegados hasta acá, voy a intentar no escribir mucho, ya que siento que la mayoría del contenido está en otra parte OwO, pero, igual quiero agradecer que hayas llegado hasta este día, pasar nuestro primer 14 de febrero es algo que no sé, es importante jsjs. Al mismo tiempo, me llena de bonitos sentimientos, soy de siempre intentar ser bueno para ti y no solo en algunos momentos del año para parecer bueno y no serlo. Siento si mis acciones a veces no tienen mucho sentido, pero siempre intentaré mostrarte todo mi ser de la mejor forma que se pueda. </h2>
-        <h2>Para empezar esta "aventura" tendrás que escuchar un audio y responder una pregunta, dependiendo de tu respuesta, tendrás una recompensa. </h2>
+        <h2 id="intro"></h2>
+        <h2 id="question1"></h2>
         
         <div class="audio-control">
             <button id="play_audio1">Primera pregunta</button>
-            <audio id="audio1" src="assets/audio_1.mp3" controls></audio>
+            <audio id="audio1" controls>
+                <source src="assets/audio_1.mp3" type="audio/mpeg">
+                Tu navegador no soporta el audio
+            </audio>
         </div>
         <input type="text" id="respuesta1" placeholder="Escribe con / /">
         <button id="verificar1">Verificar respuesta</button>
+        <div id="videoCuadro4" style="display: none;">
+            <video id="2horas" width="320" height="240">
+                <source src="assets/video4.mp4" type="video/mp4">
+                <source src="assets/video4.webm" type="video/webm">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <div id="customControls">
+                <button id="playPauseBtn">Dale acá, seguro se pausa OwO (no)</button>
+            </div>
+        </div>
         <img id="segunda" src="assets/img2.jpg" alt="imagen2">
-        <h2>Perfecto, acertaste la primera pregunta, parece fácil, pero con el pasar de las preguntas se irá complicando, espero te haya gustado la carta y yo espero poder dártela presencialmente algún día. Pero bueno, inicialmente dejar claro que lo siento si nada de esto es MUY sorprendente, pero, que sepas que lo hago con todo el cariño del mundo :,d. Ya que, espero, siempre tengas presente el hecho de que eres parte de mí todo, cada vez que te puedo tener presente en mi vida la aprovecharé, tanto que lo hacía desde antes, pero antes era solo porque me caías bien. Ahora es porque te amo y no se me pasa por la cabeza un futuro que no sea contigo.</h2>
+        <h2 id="question2"></h2>
         <div class="audio-control">
             <button id="play_audio2">Segunda pregunta</button>
             <audio id="audio2" src="assets/audio_2.mp3" controls></audio>
         </div>
         <input type="text" id="respuesta2" placeholder="Escribe con / /">
         <button id="verificar2">Verificar respuesta</button>
-        <canvas id="canvas" width="600" height="400" style="border:1px solid #000000; display: none;"></canvas>
-            <div id="respuestaCorrecta3" style="display: none;">
-                <p>Tal vez no pueda hacer el mejor dibujo, tal vez no pueda mandarte flores a tu casa (por ahora), pero, espero te guste mi dibujito todo feo que me costó más de lo que me gustaría uwu y sepas que el esfuerzo de hacer todo esto, es por y para ti porque te amo</p>
+        <div id="videoCuadro2" style="display: none;">
+            <video id="drakukeo" width="320" height="240">
+                <source src="assets/video2.mp4" type="video/mp4">
+                <source src="assets/video2.webm" type="video/webm">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <div id="customControls">
+                <button id="playPauseBtn">Dale acá, seguro se pausa OwO (no)</button>
             </div>
-        <img id="tercera" src="assets/img3.jpg" alt="Cetdimg">
-        <h2>Waos, no te voy a mentir, ni siquiera yo me sabía esa respuesta, tuve que buscarla, pero bueno. Lo importante es que llegaste a la respuesta y obtuviste unos lindos girasoles (se ven horribles, pero créeme que me costó hacerlos ☠) Y acá pasa algo muy interesante, yo no soy experto en nada, por lo que es muy complicado mostrarte mi mejor lado de "algo", no sé dibujar, pero puedo intentar hacer esta parte del proyecto para al final, hacer algo feo pero a mi manera y con mi firma. En sí, quiero mejorar en este tipo de cosas para que algún día puedas ver las grandes cosas que espero pueda hacer y regalarte porque, no te voy a mentir, últimamente cada vez que aprendo algo interesante pienso en como usarlo para mostrártelo o intentar explicarte algo que, aunque no me entiendas absolutamente nada, ahí estás siendo tú y prestándome atención.</h2>
+        </div>
+        <canvas id="canvas" width="600" height="400" style="border:1px solid #000000; display: none;"></canvas>
+        <div id="respuestaCorrecta3" style="display: none;">
+            <p>Tal vez no pueda hacer el mejor dibujo, tal vez no pueda mandarte flores a tu casa (por ahora), pero, espero te guste mi dibujito todo feo que me costó más de lo que me gustaría uwu y sepas que el esfuerzo de hacer todo esto, es por y para ti porque te amo</p>
+        </div>
+        <img id="tercera" src="assets/img3.jpg" alt="imagen3">
+        <h2 id="question3"></h2>
         <div class="audio-control">
             <button id="play_audio3">Tercera pregunta</button>
             <audio id="audio3" src="assets/audio_3.mp3" controls></audio>
         </div>
         <input type="text" id="respuesta3" placeholder="Escribe el nombre">
         <button id="verificar3">Verificar respuesta</button>
+        <div id="videoCuadro3" style="display: none;">
+            <video id="duro" width="320" height="240">
+                <source src="assets/video3.mp4" type="video/mp4">
+                <source src="assets/video3.webm" type="video/webm">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <div id="customControls">
+                <button id="playPauseBtn">Dale acá, seguro se pausa OwO (no)</button>
+            </div>
+        </div>
         <div id="videoCuadro" style="display: none;">
             <video id="dtmf" width="320" height="240" controls>
                 <source src="assets/video.mp4" type="video/mp4">
+                <source src="assets/video.webm" type="video/webm">
                 Tu navegador no soporta :c.
             </video>
         </div>
@@ -71,39 +89,29 @@
             <h2>Whats? o todas las anteriores? uwu o ninguna también no sé pero tú decides</h2>
         </div>
         <img id="cuarta" src="assets/img8.png" alt="imagen4">
-        <h2>Y hemos llegado al final, que sepas que todo esto es con amor y cariño hacia ti. De por sí eso se ve con la decoración, creo que nunca me van a ver poniendo tantas fotos de skz en mi vida :d, pero bueno, intentaré no decir mucho acá, porque quiero pensar que el Angel del futuro dijo todo en el audio siguiente y no tengo que preocuparme con el texto, verdad? Bueno, claramente habrá palabras que se me queden sin decir, porque piensa que llevo mucho tiempo pensando las cosas y cometí el pequeño error de no escribir las cosas en su momento, pero ténganme fe, en futuros momentos ya estaré 10 veces más preparado. Sin mucho más que decir, que disfrutes el último audio y el último regalito que, aunque no sea mucho, pues acá andamos bien sentimentales, confíen♥.</h2>
+        <h2 id="question4"></h2>
         <div class="audio-control">
             <button id="play_audio4">Última pregunta</button>
             <audio id="audio4" src="assets/audio_4.mp3" controls></audio>
         </div>
         <input type="text" id="respuesta4" placeholder="Escribe el nombre completo">
         <button id="verificar4">Verificar respuesta</button>
+        <div id="videoCuadro5" style="display: none;">
+            <video id="RCham" width="320" height="240">
+                <source src="assets/video5.mp4" type="video/mp4">
+                <source src="assets/video5.webm" type="video/webm">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <div id="customControls">
+                <button id="playPauseBtn">Dale acá, seguro se pausa OwO (no)</button>
+            </div>
+        </div>
         <div id="respuestaCorrecta2" style="display: none;">
             <p>Bueno, esta parte es un poco complicada, pero sí, inicialmente te regalo un muy bonita canción</p>
             <a href="https://open.spotify.com/intl-es/track/7nE9H4e4uPOis5sJY39fOc?si=a7f9466b265843f0" target="_blank">Pa ti, wonita</a>
         </div>
-
     </div>
-    <div class="sidebar_der">
-        <img id="skz5" src="assets/img5.jpg" alt="skz5v">
-        <h3>Esto no es de Dios, aunque admito que no es difícil, solo tardado xd</h3>
-        <img id="skz6" src="assets/gif3.gif" alt="skz6v">
-        <h3>La verdad es que esto me sirve mucho para practicar, así que, gracias por hacerme sentir tanto amor como para ponerme a programar</h3>
-        <img id="skz7" src="assets/img7.jpg" alt="skz7v">
-        <h3>Eres de las mejores motivaciones que tengo y espero poder ser para ti algo parecido en algún momento</h3>
-        <img id="skz8" src="assets/gif4.gif" alt="skz8v">
-        <h3>Bueno ya, mucha melosidad(?, espero no le busques el sentido a nada esto, porque no lo tiene uwu </h3>
-        <img id="skz13" src="assets/img13.jpg" alt="skz13v">
-        <h3>Mientras estoy, voy a amar lo más que pueda *sonidos de salsa* y en parte benito tiene razón, aunque ya me lo dijo el Can</h3>
-        <img id="skz14" src="assets/img14.jpg" alt="skz14v">
-        <h3>Extraño a can :c, pero bue, lo importante es seguir y aprender que la vida es el ahora y a veces no existe el después</h3>
-        <img id="skz15" src="assets/img15.jpg" alt="skz15v">
-        <h3>Nunca más pongo tantas imagenes de hyunlix, voy a quemar el disco de mi pc después de esto</h3>
-        <img id="skz16" src="assets/img16.jpg" alt="skz16v">
-
-    </div>
-
-
+    <div class="sidebar_der" id="sidebar_der"></div>
 
     <script src="scipts.js"></script>
 </body>
