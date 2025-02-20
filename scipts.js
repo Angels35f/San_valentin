@@ -258,7 +258,7 @@ function verificarRespuesta5(){
 };
 
 document.getElementById("choco").addEventListener("pause", function() {
-    const videoCuadro6 = document.getElementById('videoCuadro5');
+    const videoCuadro6 = document.getElementById('videoCuadro6');
     if (videoCuadro6.style.display === 'block') {
         this.play();
     }
@@ -382,16 +382,16 @@ function mostrarVideo5() {
     videoCuadro5.style.display = 'block';
     video5.play();
 }
+function mostrarVideo6(){
+    const videoCuadro6 = document.getElementById('videoCuadro6');
+    const video6 = document.getElementById('choco');
+    videoCuadro6.style.display= 'block';
+    video6.play();
+}
 
 function ocultarVideo() {
     const videoCuadro = document.getElementById('videoCuadro');
     const video = document.getElementById('dtmf');
     videoCuadro.style.display = 'none';
     video.pause();
-}
-
-function mostrarImagen() {
-    const imagenCuadro = document.getElementById('imagenCuadro');
-    const imagen = document.getElementById('vale');
-    imagenCuadro.style.display = 'block';
 }
