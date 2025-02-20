@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('question2').innerText = data.texts.question2;
             document.getElementById('question3').innerText = data.texts.question3;
             document.getElementById('question4').innerText = data.texts.question4;
+            document.getElementById('question5').innerText = data.texts.question5;
 
             // Actualizar imágenes en sidebar izquierdo
             const sidebarIzq = document.getElementById('sidebar_izq');
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch(error => console.error('Error al cargar el archivo JSON:', error));
 });
+
 document.getElementById("play_audio1").addEventListener("click", function() {
     let music = document.getElementById("audio1");
     music.currentTime = 702;
@@ -61,6 +63,7 @@ document.getElementById("play_audio3").addEventListener("click", function() {
         console.log("Error al reproducir el audio", error)
     })
 });
+
 document.getElementById("play_audio4").addEventListener("click", function() {
     let music = document.getElementById("audio4");
     music.currentTime = 1058;
@@ -68,6 +71,14 @@ document.getElementById("play_audio4").addEventListener("click", function() {
         console.log("Error al reproducir el audio", error)
     })
 });
+document.getElementById("play_audio5").addEventListener("click", function() {
+    let music = document.getElementById("audio5");
+    music.currentTime = 458;
+    music.play().catch(error=>{
+        console.log("Error al reproducir el audio", error)
+    })
+});
+
 document.getElementById("verificar1").addEventListener("click", verificarRespuesta1);
 document.getElementById("respuesta1").addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
@@ -96,6 +107,13 @@ document.getElementById("respuesta4").addEventListener("keydown", function(event
     }
 });
 
+document.getElementById("verificar5").addEventListener("click", verificarRespuesta5);
+document.getElementById("respuesta5").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        verificarRespuesta5();
+    }
+});
+
 function verificarRespuesta1(){
     let respuesta = document.getElementById("respuesta1").value;
     const videoCuadro4 = document.getElementById('videoCuadro4');
@@ -112,16 +130,19 @@ function verificarRespuesta1(){
         video4.play(); // Reproducir el video si la respuesta es incorrecta
     }
 };
+
 document.getElementById("2horas").addEventListener("pause", function() {
     const videoCuadro4 = document.getElementById('videoCuadro4');
     if (videoCuadro4.style.display === 'block') {
         this.play();
     }
 });
+
 document.getElementById("2horas").addEventListener("ended", function() {
     this.currentTime = 0;
     this.play();
 });
+
 function verificarRespuesta2(){
     let respuesta = document.getElementById("respuesta2").value;
     const videoCuadro2 = document.getElementById('videoCuadro2');
@@ -140,12 +161,14 @@ function verificarRespuesta2(){
         video2.play(); // Reproducir el video si la respuesta es incorrecta
     }
 }
+
 document.getElementById("drakukeo").addEventListener("pause", function() {
     const videoCuadro2 = document.getElementById('videoCuadro2');
     if (videoCuadro2.style.display === 'block') {
         this.play();
     }
 });
+
 document.getElementById("drakukeo").addEventListener("ended", function() {
     this.currentTime = 0;
     this.play();
@@ -175,16 +198,19 @@ function verificarRespuesta3(){
         video3.play(); // Reproducir el video si la respuesta es incorrecta
     }
 };
+
 document.getElementById("duro").addEventListener("pause", function() {
     const videoCuadro3 = document.getElementById('videoCuadro3');
     if (videoCuadro3.style.display === 'block') {
         this.play();
     }
 });
+
 document.getElementById("duro").addEventListener("ended", function() {
     this.currentTime = 0;
     this.play();
 });
+
 function verificarRespuesta4(){
     let respuesta = document.getElementById("respuesta4").value.toLowerCase();
     const videoCuadro5 = document.getElementById('videoCuadro5')
@@ -201,17 +227,47 @@ function verificarRespuesta4(){
         video5.play();
     }
 };
+
 document.getElementById("RCham").addEventListener("pause", function() {
     const videoCuadro5 = document.getElementById('videoCuadro5');
     if (videoCuadro5.style.display === 'block') {
         this.play();
     }
 });
+
 document.getElementById("RCham").addEventListener("ended", function() {
     this.currentTime = 0;
     this.play();
 });
 
+function verificarRespuesta5(){
+    let respuesta = document.getElementById("respuesta5").value.toLowerCase();
+    const videoCuadro6 = document.getElementById('videoCuadro6')
+    const video6 = document.getElementById('choco')
+    if (respuesta === "36") {
+        alert("Muchas preguntas");
+        imagenCuadro.style.display= 'block';
+        videoCuadro6.style.display= 'none';
+        video6.pause();
+        video6.currentTime= 0;
+    } else {
+        alert("Creo que faltan");
+        videoCuadro6.style.display= 'block';
+        video6.play();
+    }
+};
+
+document.getElementById("choco").addEventListener("pause", function() {
+    const videoCuadro6 = document.getElementById('videoCuadro5');
+    if (videoCuadro6.style.display === 'block') {
+        this.play();
+    }
+});
+
+document.getElementById("choco").addEventListener("ended", function() {
+    this.currentTime = 0;
+    this.play();
+});
 
 function drawSunflower() {
     const canvas = document.getElementById('canvas');
@@ -291,39 +347,51 @@ function drawSunflower() {
     drawSingleSunflower(300, 200);
     drawSingleSunflower(500, 200);
 }
+
 function mostrarVideo() {
     const videoCuadro = document.getElementById('videoCuadro');
     const video = document.getElementById('dtmf');
     videoCuadro.style.display = 'block';
     video.play();
 }
+
 function mostrarVideo2() {
     const videoCuadro2 = document.getElementById('videoCuadro2');
     const video2 = document.getElementById('drakukeo');
     videoCuadro2.style.display = 'block';
     video2.play();
 }
+
 function mostrarVideo3() {
     const videoCuadro3 = document.getElementById('videoCuadro3');
     const video3 = document.getElementById('duro');
     videoCuadro3.style.display = 'block';
     video3.play();
 }
+
 function mostrarVideo4() {
     const videoCuadro4 = document.getElementById('videoCuadro4');
     const video4 = document.getElementById('2horas');
     videoCuadro4.style.display = 'block';
     video4.play();
 }
+
 function mostrarVideo5() {
     const videoCuadro5 = document.getElementById('videoCuadro5');
     const video5 = document.getElementById('RCham');
     videoCuadro5.style.display = 'block';
     video5.play();
 }
+
 function ocultarVideo() {
     const videoCuadro = document.getElementById('videoCuadro');
     const video = document.getElementById('dtmf');
     videoCuadro.style.display = 'none';
     video.pause();
+}
+
+function mostrarImagen() {
+    const imagenCuadro = document.getElementById('imagenCuadro');
+    const imagen = document.getElementById('vale');
+    imagenCuadro.style.display = 'block';
 }
