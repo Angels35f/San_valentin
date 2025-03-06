@@ -39,45 +39,30 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch(error => console.error('Error al cargar el archivo JSON:', error));
 });
+//classe para reproducir os audios, pegando o buttom, o audio e o tempo de inicio ao clicar no audio, também, com um erro, caso não se reproduça.
+class AudioPlayer{
+    constructor(buttonId, audioId, startTime){
+        this.button = document.getElementById(buttonId);
+        this.audio = document.getElementById(audioId);
+        this.startTime = startTime;
+        this.init();
+    }
+    init(){
+        this.button.addEventListener('click',() => {
+            this.audio.currentTime = this.startTime;
+            this.audio.play().catch(error => {
+                console.log('Error al resproducir el audio', error);
+            })
 
-document.getElementById("play_audio1").addEventListener("click", function() {
-    let music = document.getElementById("audio1");
-    music.currentTime = 702;
-    music.play().catch(error=>{
-        console.log("Error al reproducir el audio", error)
-    })
-});
-
-document.getElementById("play_audio2").addEventListener("click", function() {
-    let music = document.getElementById("audio2");
-    music.currentTime = 560;
-    music.play().catch(error=>{
-        console.log("Error al reproducir el audio", error)
-    })
-});
-
-document.getElementById("play_audio3").addEventListener("click", function() {
-    let music = document.getElementById("audio3");
-    music.currentTime = 895;
-    music.play().catch(error=>{
-        console.log("Error al reproducir el audio", error)
-    })
-});
-
-document.getElementById("play_audio4").addEventListener("click", function() {
-    let music = document.getElementById("audio4");
-    music.currentTime = 1058;
-    music.play().catch(error=>{
-        console.log("Error al reproducir el audio", error)
-    })
-});
-document.getElementById("play_audio5").addEventListener("click", function() {
-    let music = document.getElementById("audio5");
-    music.currentTime = 458;
-    music.play().catch(error=>{
-        console.log("Error al reproducir el audio", error)
-    })
-});
+        })
+    }
+}
+//inicializar los reproductores de audio
+new AudioPlayer("play_audio1", "audio1", 702);
+new AudioPlayer("play_audio2","audio2",560);
+new AudioPlayer("play_audio3", "audio3", 895);
+new AudioPlayer("play_audio4", "audio4", 1058);
+new AudioPlayer("play_audio5", "audio5", 458);
 
 document.getElementById("verificar1").addEventListener("click", verificarRespuesta1);
 document.getElementById("respuesta1").addEventListener("keydown", function(event) {
